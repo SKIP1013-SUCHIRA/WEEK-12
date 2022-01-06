@@ -1,0 +1,103 @@
+package myMethod;
+import java.util.Scanner;
+public class MethodEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x=5;
+		int y=6;
+		
+		System.out.println("Introducion for Method");
+		showMessage();//callmethod
+		System.out.println("Hello Jitra");
+		showMessage1();
+		showMessage("Chira");
+		showMessage(5);
+		showMessage("Imelda",7);
+		showMessage(x,y);
+		int total = showSum(6,10);
+		System.out.println("Total sum is "+ total);
+		int avg = total/2;
+		System.out.println("Average = "+ avg);
+		double total2 = showSum(3.4, 10.6);
+		System.out.println("Total2 of Double "+ total2);
+		double average = total2/2;
+		System.out.println("Average = "+ average);
+		int total3= showSum();
+		System.out.println("Total3 is "+ total3);
+		double total4= showSumDouble(3,3);
+		System.out.println("Total4 is "+ total4);
+		
+	}//main method
+
+	public static void showMessage() {
+		System.out.println("Hello Malaysia");
+	}
+	
+	public static void showMessage1() {
+		System.out.println("Hello UUM");
+	}
+	
+	public static void showMessage(String name) {
+		System.out.println("Name is " + name);
+	}
+	
+	public static void showMessage(int num) {
+		System.out.println("Num is "+ num);
+	}
+	
+	
+	public static void showMessage(String name, int num) {
+		System.out.println("Name is "+ name + " Num is "+num);
+		for (int i=0; i<num; i++)
+			System.out.println("Name is "+ name);
+	}
+	
+	public static void showMessage(int a, int b) {
+		int sum=0;
+		System.out.println("First num is "+ a );
+		System.out.println("Second num is "+ b );
+		sum=a+b;
+		System.out.println("Sum is "+ sum);
+	}
+	
+	public static int showSum(int a, int b) {
+		int c=0;
+		c = a + b;
+		return c;
+	}
+	
+	public static double showSum(double g, double h) {
+		double z=0;
+		z=g+h;
+		return z;
+	}
+	
+	public static int showSum() {
+		int sum=0;
+		int [] num = new int [5];
+		Scanner a = new Scanner(System.in);
+		System.out.println("Enter 5 numbers: ");
+		for(int i=0;i<num.length;i++)
+		{
+			num[i]=a.nextInt();
+		    sum = sum + num[i];
+		}
+		return sum;
+	}
+	
+	public static double showSumDouble(int x, int y) {
+		double sum=0;
+		double [][] number = new double [x][y];
+		Scanner a = new Scanner(System.in);
+		System.out.println("Enter 6 numbers: ");
+		for (int i=0; i<3; i++)
+			for(int j=0; j<3; j++)
+			{
+				number[i][j]=a.nextDouble();
+				sum=sum+number[i][j];
+			}
+		return sum;
+	}
+}
